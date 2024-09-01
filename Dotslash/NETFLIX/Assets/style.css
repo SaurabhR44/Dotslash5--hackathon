@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Martel+Sans:wght@600&family=Phudu&family=Playfair:ital,opsz,wght@0,5..1200,500;0,5..1200,600;0,5..1200,700;1,5..1200,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* font-family: po; */
+
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url("netf.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    height: 80vh;
+    position: relative;
+}
+
+.main img {
+    border-image-slice: initial;
+}
+
+.main .box {
+    opacity: 0.6;
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    color: whitesmoke;
+}
+iframe{
+    display: flex;
+    position: fixed;
+    right: 0;
+    /* width: 50vw; */
+}
+
+nav {
+    max-width: 80vw;
+    /* max-height: 30vh; */
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    height: 58px;
+}
+
+nav img {
+    width: 130px;
+    /* object-position:initial; */
+    position: relative;
+    padding: 10px;
+    z-index: 1;
+}
+
+nav button {
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 20px;
+    padding: 30px;
+    text-align: center;
+
+}
+
+#first {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+}
+
+#second {
+    font-weight: 700;
+    font-size: 23px;
+    text-align: center;
+}
+
+#third {
+    font-size: 15px;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.sep {
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    height: 7px;
+    top: 0;
+    bottom: 0;
+
+}
+
+.btn {
+    padding: 4px 34px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(23, 23, 23, 0.9);
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.btn-red {
+    background-color: red;
+    color: whitesmoke;
+    border: none;
+    padding: 3px 23px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: whitesmoke;
+    border: none;
+
+
+}
+
+.main input {
+
+    padding: 7px 101px 8px 14px;
+    font-weight: 800;
+    border-radius: 4px;
+    font-size: 15px;
+    color: whitesmoke;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 2px solid rgba(23, 23, 23, 0.5);
+}
+
+.hero-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    color: white;
+    max-width: 70vw;
+}
+
+.ui img {
+    width: 50vw;
+    /* position: absolute;  */
+    position: relative;
+    z-index: 10;
+
+}
+
+.ui {
+    position: relative;
+    /* display: flex; */
+
+}
+
+.ui video {
+    position: absolute;
+    right: 90px;
+    top: 130px;
+    left: 120px;
+    width: min-content;
+    /* filter: brightness(2); */
+}
+
+.content>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.content>div:first-child {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.content>div :nth-child(2) {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.faqbox {
+    display: flex;
+    background-color: rgb(61, 60, 60);
+    padding: 24px;
+    width: 100%;
+    max-width: 60vw;
+    margin: 34px auto;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: 10px;
+
+
+}
+
+.faqbox:hover {
+    background-color: red;
+    transition: all 1s ease-out;
+
+}
+
+.faq {
+    background-color: black;
+    color: whitesmoke;
+    padding: 34px;
+    gap: 0px;
+    font-size: 25px;
+    margin: 0;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 45px;
+    /* text-decoration: red; */
+    border-style: groove;
+    border-color: red;
+    border-radius: 5px;
+    border-width: 10px;
+    font-weight: bold;
+    /* text-shadow:  salmon; */
+
+}
+
+.faqbox img {
+    filter: invert(1);
+}
+
+footer {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: whitesmoke;
+    max-width: 60vw;
+    list-style: none;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer span {
+    margin: 12px 30vw;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.copy {
+    text-align: right;
+    position: absolute;
+    padding: 49px 8px;
+    color: red;
+}
+

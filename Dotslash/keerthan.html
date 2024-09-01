@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+</head>
+<body>
+    <h1>QR Code Scanner</h1>
+    <video id="preview" style="width: 100%; max-width: 500px;"></video>
+    <div id="output"></div>
+    <form id="phoneForm">
+        <label for="phoneNumber">Enter your phone number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        <button type="submit">Send Request</button>
+    </form> 
+
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script>
+        // Initialize Instascan scanner
+        let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+
+        // Function to handle QR code scanning
+        scanner.addListener('scan', function (content) {
+            // Display scanned QR code data
+            document.getElementById('output').textContent = 'Scanned QR code data: ' + content;
+            // Show the phone number form
+            document.getElementById('phoneForm').style.display = 'block';
+            // Set the QR code data as a hidden input value
+            document.getElementById('qrData').value = content;
+            // Stop the scanner
+            scanner.stop();
+        });
+
+        // Start scanning
+        Instascan.Camera.getCameras().then(function (cameras) {
+            if (cameras.length > 0) {
+                scanner.start(cameras[0]);
+            } else {
+                console.error('No cameras found.');
+            }
+        }).catch(function (e) {
+            console.error(e);
+        });
+
+        // Function to handle form submission
+        document.getElementById('phoneForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            var qrData = document.getElementById('qrData').value;
+            
+            // Send a request to the server with the QR data and phone number
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https:///api/submitData', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log('Request sent successfully.');
+                    // Optionally, display a success message to the user
+                    alert('Request sent successfully.');
+                }
+            };
+            xhr.send(JSON.stringify({ qrData: qrData, phoneNumber: phoneNumber }));
+        });
+    </script>
+</body>
+</html>

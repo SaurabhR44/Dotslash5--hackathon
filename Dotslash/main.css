@@ -1,0 +1,141 @@
+body{
+    --color-primary:#543ee4;
+    --color-primary-dark:#110463;
+    --color-secondary:#a7aeea;
+    --color-error:#e81f1f;
+    --color-success:#4bb544;
+    --border-radius:4px;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    background: url(pexels-simon-berger-1323550.jpg);
+    background-size: cover;
+    background-image: url(WhatsApp\ Image\ 2024-03-23\ at\ 3.36.28\ PM.jpeg);
+}
+
+.container{
+    width: 600px;
+    height: 500px;
+    max-width: 500px;
+    margin: 10rem;
+    padding: 1rem;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    border-radius: var(--border-radius);
+    background: transparent;
+    text-align: center;
+    line-height: 40%;
+    display: block;
+
+
+}
+.container,.form__input,.form__button{
+    font: 500 1rem 'Balsamiq Sans','Quicksand';
+    
+}
+
+.form--hidden{
+    display: none;
+}
+
+.form > *:first-child{
+    margin-bottom: 0;
+
+}
+.form > *:last-child{
+    margin-bottom: 0;
+
+}
+.form__title{
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+.form__message{
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+.form__message--success{
+    color:var(--color-success);
+}
+.form__message--error{
+    color:var(--color-error);
+}
+
+.form__input-group{
+    margin-bottom: 1rem;
+
+}
+.form__input{
+    display: block;
+    width: 100%;
+    /* height: 45px; */
+    box-sizing: border-box;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    border: 1px solid black;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.3s,border-color 0.3s;
+
+}
+
+.form__input:focus{
+    border-color: var(--color-primary);
+    background: transparent;
+}
+.form__input--error{
+
+    color: var(--color-error);
+    border-color:var(--color-error);
+}
+.form__input-error-message{
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+
+}
+
+.form__button{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: orange;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    outline: none;
+    background: var(--color-primary);
+
+}
+
+.form__button:hover{
+    background: var(--color-primary-dark);
+    transition: all 0.7s linear;
+}
+
+.form__button:active{
+    transform: scale(0.9);
+    background: red;    
+}
+.form__text{
+    text-align: center;
+
+}
+
+.form__link{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.form__link:hover{
+text-decoration: underline;
+
+
+}

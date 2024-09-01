@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER PAGE</title>
+    <link rel="shortcut icon" href="logoo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="main2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Additional CSS for cart font */
+        .cart-items {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="" class="logo"><i class="fas fa-utensils">Food Zone</i></a>
+        <form action="" class="search-form">
+            <input type="search" id="searchBox" placeholder="Search here...">
+            <label for="" class="fas fa-search"></label>
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search">
+                    <div id="share-btn" class="fas fa-share">
+                        <div id="user-btn" class="fas fa-user">
+                            <div id="menu-btn" class="fas fa-bars">
+
+
+                            </div>
+
+                        </div>
+                    </div>
+        </form>
+    </header>
+    <section class="home" id="home">
+        <div class="image">
+            <img src="food6.jpg" alt="" srcset="">
+        </div>
+        <div class="content">
+            <h3>Delicious Food for You</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ad.</p>
+            <a href="" class="btn">Explore Now!</a>
+        </div>
+    </section>
+
+    <section class="form-container">
+        <form id="orderForm">
+            <div class="inputBox">
+                <span>Where</span>
+                <input type="text" name="location" placeholder="Search Places">
+            </div>
+            <div class="inputBox">
+                <span>When</span>
+                <input type="date" name="date">
+            </div>
+            <div class="inputBox">
+                <span>Time</span>
+                <input type="time" name="time">
+            </div>
+            <input type="submit" value="Order Now" class="btn">
+        </form>
+    </section>
+    <section id="orderConfirmation" class="order-confirmation">
+        <div class="message"></div>
+    </section>
+
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <button id="checkout-btn" class="btn">Proceed to Checkout</button>
+    </section>
+    <section class="packages" id="packages">
+        <h1 class="headings">>Our <span>Foods</span></h1>
+        <div class="box-container">
+            <!-- Food boxes -->
+            <div class="box">
+                <div class="image">
+                    <img src="food2.jpg" alt="">
+                    <h3><i class="fas fa-utensils"></i>HamBurger</h3>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        199.99 <span>249.99</span>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, possimus.</p>
+                    <button class="btn order-btn" data-name="HamBurger" data-price="199.99">Order Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="food3.jpg" alt="">
+                    <h3><i class="fas fa-utensils"></i>HamBurger</h3>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        199.99 <span>249.99</span>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, possimus.</p>
+                    <button class="btn order-btn" data-name="HamBurger" data-price="199.99">Order Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="food4.jpg" alt="">
+                    <h3><i class="fas fa-utensils"></i>HamBurger</h3>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        199.99 <span>249.99</span>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, possimus.</p>
+                    <button class="btn order-btn" data-name="HamBurger" data-price="199.99">Order Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="food5.jpg" alt="">
+                    <h3><i class="fas fa-utensils"></i>HamBurger</h3>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        199.99 <span>249.99</span>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, possimus.</p>
+                    <button class="btn order-btn" data-name="HamBurger" data-price="199.99">Order Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="food7.jpg" alt="">
+                    <h3><i class="fas fa-utensils"></i>Noodles</h3>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        199.99 <span>249.99</span>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, possimus.</p>
+                    <button class="btn order-btn" data-name="Noodles" data-price="199.99">Order Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="food3.jpg" alt="">
+                    <h3><i class="fas fa-utensils"></i></h3>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        99.99 <span>149.99</span>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, possimus.</p>
+                    <button class="btn order-btn" data-name="Custom Item" data-price="99.99">Order
+                    </button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="food3.jpg" alt="">
+                    <h3><i class="fas fa-utensils"></i>HamBurger</h3>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        299.99 <span>349.99</span>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, possimus.</p>
+                    <button class="btn order-btn" data-name="HamBurger" data-price="299.99">Order Now</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="food3.jpg" alt="">
+                    <h3><i class="fas fa-utensils"></i>HamBurger</h3>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        199.99 <span>249.99</span>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, possimus.</p>
+                    <button class="btn order-btn" data-name="HamBurger" data-price="199.99">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing" id="pricing">
+        <h1 class="heading">Our <span>Pricing</span></h1>
+        <div class="box-container">
+            <!-- Pricing boxes -->
+            <div class="box">
+                <h3>Basic Plan</h3>
+                <div class="price">
+                    <span>$</span>
+                    <span class="amount">30</span>
+                    <span>/mo</span>
+                </div>
+                <ul>
+                    <li>10 Days</li>
+                    <li>Food & Drink</li>
+                    <li>Safety Guide</li>
+                    <li>Free Delivery</li>
+                </ul>
+                <a href="" class="btn">Choose Plan</a>
+            </div>
+            <div class="box">
+                <h3>Basic Plan</h3>
+                <div class="price">
+                    <span>$</span>
+                    <span class="amount">50</span>
+                    <span>/mo</span>
+                </div>
+                <ul>
+                    <li>10 Days</li>
+                    <li>Food & Drink</li>
+                    <li>Safety Guide</li>
+                    <li>Free Delivery</li>
+                </ul>
+                <a href="" class="btn">Choose Plan</a>
+            </div>
+            <div class="box">
+                <h3>Basic Plan</h3>
+                <div class="price">
+                    <span>$</span>
+                    <span class="amount">100</span>
+                    <span>/mo</span>
+                </div>
+                <ul>
+                    <li>10 Days</li>
+                    <li>Food & Drink</li>
+                    <li>Safety Guide</li>
+                    <li>Free Delivery</li>
+                </ul>
+                <a href="" class="btn">Choose Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h1 class="heading">
+            <span>Contact</span>Us
+        </h1>
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="First Name">
+                <input type="email" placeholder="Email-Id">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    
+    <section class="footer">
+        <!-- Footer content -->
+    </section>
+    <div class="credits">
+        Created By <span>Dynamic Dudes</span>|All rights reserved
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const orderForm = document.getElementById('orderForm');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const checkoutBtn = document.getElementById('checkout-btn');
+    
+            const cart = []; // Array to store cart items
+    
+            // Function to add item to cart
+            function addItemToCart(name, price) {
+                const item = { name, price };
+                cart.push(item);
+                renderCart();
+            }
+    
+            // Function to remove item from cart
+            function removeItemFromCart(index) {
+                cart.splice(index, 1);
+                renderCart();
+            }
+    
+            // Function to render cart items
+            function renderCart() {
+                cartItemsContainer.innerHTML = ''; // Clear existing items
+    
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <span>${item.name}</span>
+                        <span>$${item.price.toFixed(2)}</span>
+                        <button class="remove-btn">Remove</button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+    
+                    // Add event listener to remove button
+                    const removeBtn = cartItem.querySelector('.remove-btn');
+                    removeBtn.addEventListener('click', () => removeItemFromCart(index));
+                });
+    
+                // Update checkout button text based on cart length
+                if (cart.length > 0) {
+                    checkoutBtn.textContent = `Proceed to Checkout (${cart.length} items)`;
+                } else {
+                    checkoutBtn.textContent = `Your Cart is Empty`;
+                }
+            }
+    
+            // Add event listener for order form submission
+            orderForm.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                // Retrieve form data and create item object
+                const location = orderForm.querySelector('input[name="location"]').value;
+                const date = orderForm.querySelector('input[name="date"]').value;
+                const time = orderForm.querySelector('input[name="time"]').value;
+                const item = { name: 'Food Item', price: 199.99 }; // Sample item
+                addItemToCart(item.name, item.price);
+            });
+    
+            // Add event listener for order buttons
+            const orderButtons = document.querySelectorAll('.order-btn');
+            orderButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const name = button.getAttribute('data-name');
+                    const price = parseFloat(button.getAttribute('data-price'));
+                    addItemToCart(name, price);
+                });
+            });
+    
+            // Add event listener for checkout button
+            checkoutBtn.addEventListener('click', () => {
+                // Implement checkout logic here
+                console.log('Proceeding to checkout...');
+            });
+        });
+    </script>
+    
